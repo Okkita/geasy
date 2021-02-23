@@ -1,0 +1,1 @@
+--  handle init of GMCP and load character settings and config here
