@@ -1,0 +1,10 @@
+[
+    {
+        "name": "keypadup",
+        "keys": "keypad+8"
+    },
+    {
+        "name": "keypadup",
+        "keys": "keypad+up"
+    }
+]
