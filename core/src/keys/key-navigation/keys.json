@@ -1,0 +1,57 @@
+[
+    {
+        "name": "keypadnorth",
+        "keys": "keypad+8",
+        "script": "Geasy.move('north')"
+    },
+    {
+        "name": "keypadnortheast",
+        "keys": "keypad+9",
+        "script": "Geasy.move('northeast')"
+    },
+    {
+        "name": "keypadeast",
+        "keys": "keypad+6",
+        "script": "Geasy.move('east')"
+    },
+    {
+        "name": "keypadsoutheast",
+        "keys": "keypad+3",
+        "script": "Geasy.move('southeast')"
+    },
+    {
+        "name": "keypadsouthwest",
+        "keys": "keypad+1",
+        "script": "Geasy.move('southwest')"
+    },
+    {
+        "name": "keypadwest",
+        "keys": "keypad+4",
+        "script": "Geasy.move('west')"
+    },
+    {
+        "name": "keypadnorthwest",
+        "keys": "keypad+7",
+        "script": "Geasy.move('northwest')"
+    },
+    {
+        "name": "keypadsouth",
+        "keys": "keypad+2",
+        "script": "Geasy.move('south')"
+    },
+    {
+        "name": "keypadclear",
+        "keys": "keypad+5",
+        "script": "Geasy.move('look')"
+    },
+    {
+        "name": "keypadup",
+        "keys": "keypad+-",
+        "script": "Geasy.move('up')"
+    },
+    {
+        "name": "keypaddown",
+        "keys": "keypad+plus",
+        "script": "Geasy.move('down')"
+    }
+]
