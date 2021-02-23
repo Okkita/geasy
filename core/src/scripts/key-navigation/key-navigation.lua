@@ -1,5 +1,3 @@
 Geasy = Geasy or {}
 
-function Geasy.move(dir)
-    send(dir)
-end
+function Geasy.move(dir) send(dir) end
