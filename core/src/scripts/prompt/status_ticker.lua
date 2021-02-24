@@ -19,7 +19,7 @@ function Geasy.renderStatusTicker()
     local staminadiff = myStamina - Geasy.character.lastStamina
     local fatiguediff = myFatigue - Geasy.character.lastFatigue
 
-    if Geasy.config.wantVIPrompt then
+    if Geasy.config.VI then
         if healthdiff ~= 0 then
             display(healthdiff)
             echo("\n" .. string.format("Health %+d", healthdiff))
@@ -53,7 +53,7 @@ function Geasy.renderStatusTicker()
     local changed = #string.trim(output) > 0
 
     if changed then
-        if not Geasy.config.wantVIPrompt then
+        if not Geasy.config.VI then
             echo("[ " .. output .. "]\n")
         end
         echo("GUI.Ticker", getTime(true, "HH:mm:ss") .. " - [ " .. output .. "]\n")
