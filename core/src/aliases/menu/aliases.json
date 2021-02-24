@@ -14,5 +14,9 @@
     {
         "name": "gabout",
         "regex": "^gabout$"
+    },
+    {
+        "name": "gmcp",
+        "regex": "^gmcp$"
     }
 ]
