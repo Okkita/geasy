@@ -1,0 +1,1 @@
+Geasy.uninstall()

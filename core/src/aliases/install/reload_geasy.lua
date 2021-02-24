@@ -1,1 +1,1 @@
-Geasy.reloadGeasy()
+Geasy.reloadPackage()

@@ -2,5 +2,17 @@
     {
         "name": "reload geasy",
         "regex": "^rg$"
+    },
+    {
+        "name": "guninstall",
+        "regex": "^guninstall confirm$"
+    },
+    {
+        "name": "ghelp",
+        "regex": "^ghelp$"
+    },
+    {
+        "name": "gabout",
+        "regex": "^gabout$"
     }
 ]
