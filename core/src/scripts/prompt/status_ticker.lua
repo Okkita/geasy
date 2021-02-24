@@ -1,6 +1,6 @@
 Geasy = Geasy or {}
 Geasy.config = Geasy.config or {}
-Geasy.config.wantVIPrompt = Geasy.config.wantVIPrompt or true
+Geasy.config.VI = Geasy.config.VI or false
 
 Geasy.character.lastHealth = Geasy.character.lastHealth or 0
 Geasy.character.lastMana = Geasy.character.lastMana or 0
@@ -19,7 +19,7 @@ function Geasy.renderStatusTicker()
     local staminadiff = myStamina - Geasy.character.lastStamina
     local fatiguediff = myFatigue - Geasy.character.lastFatigue
 
-    if Geasy.config.wantVIPrompt then
+    if Geasy.config.VI then
         if healthdiff ~= 0 then
             display(healthdiff)
             echo("\n" .. string.format("Health %+d", healthdiff))
@@ -35,28 +35,28 @@ function Geasy.renderStatusTicker()
         end
     end
 
-    local emptyBlock = "    "
+    local emptyBlock = "     "
     local output = ""
     output = output ..
-                 (healthdiff ~= 0 and string.format("%+2dh", healthdiff) or
+                 (healthdiff ~= 0 and string.format("%+3dh ", healthdiff) or
                      emptyBlock)
     output = output ..
-                 (manadiff ~= 0 and string.format("%+2dm", manadiff) or
+                 (manadiff ~= 0 and string.format("%+3dm ", manadiff) or
                      emptyBlock)
     output = output ..
-                 (staminadiff ~= 0 and string.format("%+2ds", staminadiff) or
+                 (staminadiff ~= 0 and string.format("%+3ds ", staminadiff) or
                      emptyBlock)
     output = output ..
-                 (fatiguediff ~= 0 and string.format("%+2df", fatiguediff) or
+                 (fatiguediff ~= 0 and string.format("%+3df ", fatiguediff) or
                      emptyBlock)
 
     local changed = #string.trim(output) > 0
 
     if changed then
-        if not Geasy.config.wantVIPrompt then
-            echo("[ " .. output .. " ]\n")
+        if not Geasy.config.VI then
+            echo("[ " .. output .. "]\n")
         end
-        echo("GUI.Ticker", getTime(true, "HH:mm:ss") .. " - [ " .. output .. " ]\n")
+        echo("GUI.Ticker", getTime(true, "HH:mm:ss") .. " - [ " .. output .. "]\n")
     end
 
     Geasy.character.lastHealth = myHealth
